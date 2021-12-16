@@ -1,0 +1,293 @@
+* {
+  color: white;
+  width: 100%;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+body {
+  background-image: url("/img/background.jpg");
+  background-size: cover;
+}
+
+img {
+  border-radius: 0 0 30px 30px;
+  border-bottom: 2px yellow solid;
+}
+
+.container {
+  padding: 1rem;
+  margin-top: 1rem;
+  width: calc(100% - 2rem);
+}
+
+h1 {
+  font-weight: normal;
+  font-size: clamp(1rem, 5vw, 2rem);
+  margin-bottom: 1rem;
+}
+
+.h1_upper_case {
+  font-weight: bold;
+  font-size: clamp(1.25rem, 7vw, 2.5rem);
+}
+
+h5 {
+  font-size: clamp(0.75rem, 4vw, 1.15rem);
+  font-style: italic;
+  font-weight: lighter;
+  text-align: justify;
+}
+
+p {
+  margin-bottom: 0.5rem;
+}
+
+.input_title {
+  font-weight: bold;
+  font-size: clamp(0.8rem, 4vw, 1.25rem);
+  margin-bottom: 1rem;
+}
+
+input {
+  width: auto;
+}
+
+.error {
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.input_text {
+  width: 90%;
+  font-size: clamp(1rem, 4vw, 1.75rem);
+  background-color: #78608ecc;
+  border: 1px #efcfff solid;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+.input_text:focus {
+  outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+label {
+  margin: 5px;
+}
+
+.center {
+  margin: auto;
+  display: inherit;
+}
+
+.button_div {
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  font-size: clamp(1rem, 5vw, 2rem);
+}
+
+button {
+  width: 60%;
+  color: #b75014;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+  font-weight: bolder;
+  background-color: #fff;
+}
+
+.input_section {
+  margin-top: 1.5rem;
+}
+
+.role_section {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: stretch;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.example {
+  font-size: smaller;
+  font-weight: lighter;
+  font-style: italic;
+}
+
+label {
+  margin: 0;
+}
+
+/* The container */
+.btn_container {
+  display: inline;
+  position: relative;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  flex-shrink: 3;
+  width: fit-content;
+}
+
+/* Hide the browser's default radio button */
+.btn_container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  display: inline-block;
+  position: absolute;
+  top: 3px;
+  left: -16px;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  border: 1px white solid;
+}
+
+.check_text {
+  text-align: center;
+  font-size: clamp(0.8rem, 4vw, 1.25rem);
+  left: 16px;
+  width: fit-content;
+  white-space: nowrap;
+}
+
+/* On mouse-over, add a grey background color */
+.btn_container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.btn_container input:checked ~ .checkmark {
+  background-color: transparent;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.btn_container input:checked ~ .checkmark:after {
+  display: inline-block;
+}
+
+/* Style the indicator (dot/circle) */
+.btn_container .checkmark:after {
+  top: 1px;
+  left: 1px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #45176fcc;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  text-align: center;
+  font-size: 1.25rem;
+  border-radius: 25px;
+}
+
+#model_content {
+  font-size: large;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  position: absolute;
+  float: right;
+  font-size: 36px;
+  font-weight: bold;
+  top: -16px;
+  right: -11px;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.icon_box {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: flex-end;
+  margin-bottom: 18px;
+  position: relative;
+}
+
+i {
+  margin: auto;
+  width: fit-content;
+}
+
+@media only screen and (min-width: 769px) {
+  * {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 426px) {
+  .button_div button {
+    height: 50px;
+    font-size: large;
+  }
+
+  .checkmark {
+    top: 6px;
+    left: -18px;
+  }
+}
