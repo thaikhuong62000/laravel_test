@@ -1,0 +1,295 @@
+* {
+  color: #fff;
+  box-sizing: border-box;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.green {
+  color: #62a650;
+}
+
+body {
+  background: url("/img/teasing-home-bg2x.jpg") top center / cover no-repeat
+    #041c04;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  position: relative;
+}
+
+.container {
+  max-width: 768px;
+  padding: 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.logo {
+  width: 200px;
+  margin-bottom: 150px;
+}
+
+.logo img {
+  display: block;
+  width: 100%;
+}
+
+@media only screen and (max-width: 425px) {
+  body {
+    background: url("/img/teasing-home-bg2x.jpg") top center / contain no-repeat
+      #041c04;
+  }
+}
+
+/* ------------------------------------------------------ */
+
+.title {
+  font-weight: 900;
+  font-size: xx-large;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.timer__container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  width: 100%;
+  border-width: 3px;
+  border-style: solid;
+  border-image: linear-gradient(
+      to right,
+      rgba(128, 220, 104, 0),
+      #80dc68,
+      rgba(128, 220, 104, 0)
+    )
+    100% 1;
+  margin-bottom: 1.5rem;
+}
+
+.timer__field {
+  flex: 0 0 10%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-end;
+  margin: 1rem 0.25rem;
+  font-size: x-large;
+}
+
+.item__text {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  font-size: large;
+}
+
+.info {
+  font-size: large;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.note,
+.aa {
+  margin-bottom: 1.5rem;
+}
+
+/* ------------------------------------------------------ */
+
+form {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.form__field input {
+  padding: 1rem;
+  font-size: large;
+  background: rgb(23, 79, 40, 0.7);
+  border: 1px solid #298243;
+  border-radius: 4px;
+  width: 100%;
+}
+
+input:focus {
+  outline: none;
+}
+
+input::placeholder {
+  color: #fff;
+  opacity: 1;
+}
+
+.form__field {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.form__error {
+  margin-top: 0.5rem;
+  content: "Vui lòng điền thông tin";
+  color: #ff3000;
+  font-size: small;
+  display: none;
+}
+
+.form__row {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+}
+
+.form__row .form__field + .form__field {
+  margin-left: 1rem;
+}
+
+@media only screen and (max-width: 425px) {
+  .form__row {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+  }
+  .form__row .form__field + .form__field {
+    margin-left: 0;
+  }
+}
+
+.checkbox {
+  width: fit-content;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.checkbox__text {
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: underline;
+}
+
+button {
+  padding: 0;
+  margin: 3rem;
+  padding: 0.75rem 2rem;
+  font-size: large;
+  border: 3px solid transparent;
+  position: relative;
+  background-color: #041c04;
+  box-shadow: 0 0 30px 0 rgb(149, 235, 126);
+  border-radius: 50px;
+  background-clip: padding-box;
+}
+
+button::after {
+  content: "";
+  display: block;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -3px;
+  border-radius: inherit;
+  position: absolute;
+  background-image: linear-gradient(
+    90deg,
+    rgba(98, 166, 80, 0),
+    #62a650 46.35%,
+    rgba(98, 166, 80, 0)
+  );
+}
+
+button:hover {
+  background-color: #62a650;
+  box-shadow: none;
+}
+
+button:hover::after {
+  display: none;
+}
+
+/* ------------------------------------------------------ */
+
+footer {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.footer__div1 {
+  text-align: center;
+  font-size: small;
+  margin-bottom: 1rem;
+}
+
+.footer__div2 {
+  text-align: center;
+  font-size: smaller;
+  margin-bottom: 1rem;
+}
+
+/* ------------------------------------------------------ */
+.form__field {
+  position: relative;
+}
+.form__row img {
+  position: absolute;
+  display: block;
+  right: 10px;
+  top: 1rem;
+  transform: rotate(0deg);
+  transition: transform 0.3s;
+  width: 25px;
+  height: 25px;
+}
+.form__row input:focus ~ img {
+  transform: rotate(180deg);
+}
+.dropdown {
+  display: block;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 100%;
+  max-height: 0;
+  opacity: 0;
+  overflow-y: scroll;
+  overflow-x: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 0.25rem;
+  z-index: 1;
+  transition: max-height 0.3s;
+}
+.dropdown__item {
+  color: black;
+  padding: 0.5rem;
+}
+.dropdown__item:hover,
+.dropdown__item:focus {
+  background: #ddd;
+}
+.form__row input:focus ~ .dropdown {
+  max-height: 200px;
+  opacity: 1;
+}
+/* --------------------------------------------------------------------- */
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  padding: 4rem;
+  border-radius: 20px;
+  background-color: rgba(30, 95, 50, 0.9);
+  display: none;
+  transition: transform 0.3s, opacity 0.3s;
+}
